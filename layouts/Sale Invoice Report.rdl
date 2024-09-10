@@ -22,85 +22,6 @@
       <rd:DataSourceID>a3c17020-9a72-4a55-8fb9-a5eb89f279fe</rd:DataSourceID>
     </DataSource>
   </DataSources>
-  <DataSets>
-    <DataSet Name="DataSet_Result">
-      <Query>
-        <DataSourceName>DataSource</DataSourceName>
-        <CommandText />
-      </Query>
-      <Fields>
-        <Field Name="companyName">
-          <DataField>companyName</DataField>
-        </Field>
-        <Field Name="companyAddress">
-          <DataField>companyAddress</DataField>
-        </Field>
-        <Field Name="companyAddress2">
-          <DataField>companyAddress2</DataField>
-        </Field>
-        <Field Name="companyCity">
-          <DataField>companyCity</DataField>
-        </Field>
-        <Field Name="companyState">
-          <DataField>companyState</DataField>
-        </Field>
-        <Field Name="companyCountry">
-          <DataField>companyCountry</DataField>
-        </Field>
-        <Field Name="companyPostCode">
-          <DataField>companyPostCode</DataField>
-        </Field>
-        <Field Name="companyPhone">
-          <DataField>companyPhone</DataField>
-        </Field>
-        <Field Name="companyEMail">
-          <DataField>companyEMail</DataField>
-        </Field>
-        <Field Name="companyPicture">
-          <DataField>companyPicture</DataField>
-        </Field>
-        <Field Name="No_">
-          <DataField>No_</DataField>
-        </Field>
-        <Field Name="Document_Date">
-          <DataField>Document_Date</DataField>
-        </Field>
-        <Field Name="Payment_Terms_Code">
-          <DataField>Payment_Terms_Code</DataField>
-        </Field>
-        <Field Name="Bill_to_Name">
-          <DataField>Bill_to_Name</DataField>
-        </Field>
-        <Field Name="Bill_to_Address">
-          <DataField>Bill_to_Address</DataField>
-        </Field>
-        <Field Name="Bill_to_City">
-          <DataField>Bill_to_City</DataField>
-        </Field>
-        <Field Name="Bill_to_County">
-          <DataField>Bill_to_County</DataField>
-        </Field>
-        <Field Name="Bill_to_Post_Code">
-          <DataField>Bill_to_Post_Code</DataField>
-        </Field>
-        <Field Name="TotalAmount">
-          <DataField>TotalAmount</DataField>
-        </Field>
-        <Field Name="TotalAmountFormat">
-          <DataField>TotalAmountFormat</DataField>
-        </Field>
-        <Field Name="Description">
-          <DataField>Description</DataField>
-        </Field>
-        <Field Name="Amount_Including_VAT">
-          <DataField>Amount_Including_VAT</DataField>
-        </Field>
-        <Field Name="Amount_Including_VATFormat">
-          <DataField>Amount_Including_VATFormat</DataField>
-        </Field>
-      </Fields>
-    </DataSet>
-  </DataSets>
   <ReportSections>
     <ReportSection>
       <Body>
@@ -1329,12 +1250,6 @@ HILLSDALE, MI 49242</Value>
       </Page>
     </ReportSection>
   </ReportSections>
-  <ReportParametersLayout>
-    <GridLayoutDefinition>
-      <NumberOfColumns>4</NumberOfColumns>
-      <NumberOfRows>2</NumberOfRows>
-    </GridLayoutDefinition>
-  </ReportParametersLayout>
   <Code>Public Function BlankZero(ByVal Value As Decimal)
     if Value = 0 then
         Return ""
@@ -1374,4 +1289,80 @@ End Function
   <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
   <rd:ReportUnitType>Cm</rd:ReportUnitType>
   <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="companyName">
+          <DataField>companyName</DataField>
+        </Field>
+        <Field Name="companyAddress">
+          <DataField>companyAddress</DataField>
+        </Field>
+        <Field Name="companyAddress2">
+          <DataField>companyAddress2</DataField>
+        </Field>
+        <Field Name="companyCity">
+          <DataField>companyCity</DataField>
+        </Field>
+        <Field Name="companyState">
+          <DataField>companyState</DataField>
+        </Field>
+        <Field Name="companyCountry">
+          <DataField>companyCountry</DataField>
+        </Field>
+        <Field Name="companyPostCode">
+          <DataField>companyPostCode</DataField>
+        </Field>
+        <Field Name="companyPhone">
+          <DataField>companyPhone</DataField>
+        </Field>
+        <Field Name="companyEMail">
+          <DataField>companyEMail</DataField>
+        </Field>
+        <Field Name="companyPicture">
+          <DataField>companyPicture</DataField>
+        </Field>
+        <Field Name="No_">
+          <DataField>No_</DataField>
+        </Field>
+        <Field Name="Document_Date">
+          <DataField>Document_Date</DataField>
+        </Field>
+        <Field Name="Payment_Terms_Code">
+          <DataField>Payment_Terms_Code</DataField>
+        </Field>
+        <Field Name="Bill_to_Name">
+          <DataField>Bill_to_Name</DataField>
+        </Field>
+        <Field Name="Bill_to_Address">
+          <DataField>Bill_to_Address</DataField>
+        </Field>
+        <Field Name="Bill_to_City">
+          <DataField>Bill_to_City</DataField>
+        </Field>
+        <Field Name="Bill_to_County">
+          <DataField>Bill_to_County</DataField>
+        </Field>
+        <Field Name="Bill_to_Post_Code">
+          <DataField>Bill_to_Post_Code</DataField>
+        </Field>
+        <Field Name="TotalAmount">
+          <DataField>TotalAmount</DataField>
+        </Field>
+        <Field Name="Description">
+          <DataField>Description</DataField>
+        </Field>
+        <Field Name="Amount_Including_VAT">
+          <DataField>Amount_Including_VAT</DataField>
+        </Field>
+        <Field Name="Amount_Including_VATFormat">
+          <DataField>Amount_Including_VATFormat</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
 </Report>
