@@ -5,6 +5,8 @@ page 50104 "Setup Dispute"
     UsageCategory = Administration;
     SourceTable = "Setup Dispute";
     Editable = true;
+    InsertAllowed = false;
+    DeleteAllowed = false;
 
     layout
     {
@@ -30,17 +32,39 @@ page 50104 "Setup Dispute"
     {
         area(Processing)
         {
-            action("Print/Send")
+            action(Nav_1)
             {
+                Caption = 'Open Dispute Types';
                 ApplicationArea = All;
+                Image = Navigate;
 
                 trigger OnAction()
                 begin
+                    Page.RunModal(Page::"Dispute Type");
+                end;
+            }
+            action(Nav_2)
+            {
+                Caption = 'Open Dispute Status';
+                ApplicationArea = All;
+                Image = Navigate;
 
+                trigger OnAction()
+                begin
+                    Page.RunModal(Page::"Dispute Status");
+                end;
+            }
+            action(Nav_3)
+            {
+                Caption = 'Open Dispute Reason';
+                ApplicationArea = All;
+                Image = Navigate;
+                trigger OnAction()
+                begin
+                    Page.RunModal(Page::"Dispute Reason");
                 end;
             }
         }
     }
-
     var
 }

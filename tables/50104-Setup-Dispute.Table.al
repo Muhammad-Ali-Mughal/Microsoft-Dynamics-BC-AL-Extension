@@ -12,7 +12,6 @@ table 50104 "Setup Dispute"
         field(20; "Enable Write Cont. Vendors"; Boolean)
         {
             DataClassification = CustomerContent;
-
         }
         field(30; "Dispute Series No."; Code[20])
         {

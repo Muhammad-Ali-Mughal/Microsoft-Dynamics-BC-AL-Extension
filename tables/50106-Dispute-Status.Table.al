@@ -1,6 +1,8 @@
 table 50106 "Dispute Status"
 {
     DataClassification = CustomerContent;
+    DrillDownPageId = "Dispute Status";
+    LookupPageId = "Dispute Status";
 
     fields
     {

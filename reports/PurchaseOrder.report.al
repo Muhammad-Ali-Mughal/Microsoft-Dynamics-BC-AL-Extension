@@ -44,7 +44,8 @@ report 50102 "Purchase Order Report"
                 column(Description; Description) { }
                 column(Quantity; Quantity) { }
                 column(Unit_Volume; "Unit of measure") { }
-                column(Unit_Cost; "Unit Cost") { }
+                column(Unit_Cost; "Direct Unit Cost") { }
+                column(Unit_Price__LCY_; "Unit Price (LCY)") { }
                 column(Amount_Including_VAT; "Amount Including VAT") { }
                 column(Line_Discount_Amount; "Line Discount Amount") { }
                 column(Line_Discount__; "Line Discount %") { }
