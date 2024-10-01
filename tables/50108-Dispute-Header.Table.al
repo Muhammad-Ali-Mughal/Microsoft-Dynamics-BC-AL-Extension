@@ -43,7 +43,7 @@ table 50108 "Dispute Header"
         {
             FieldClass = FlowField;
             Editable = false;
-            CalcFormula = sum("Dispute Lines"."Dispute Amount");
+            CalcFormula = sum("Dispute Lines"."Dispute Amount" where("Dispute No." = field("Dispute No.")));
         }
         field(160; "Dispute Status"; Code[20])
         {
@@ -68,5 +68,6 @@ table 50108 "Dispute Header"
             Disputesetup.TestField("Dispute Series No.");
         if rec."Dispute No." = '' then
             rec."Dispute No." := NoSeries.GetNextNo(Disputesetup."Dispute Series No.", Today, true);
+        Message('Record successfully created.');
     end;
 }

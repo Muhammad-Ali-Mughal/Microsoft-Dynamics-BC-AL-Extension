@@ -60,10 +60,18 @@ table 50109 "Dispute Lines"
         field(180; "Dispute Quantity"; Decimal)
         {
             DataClassification = CustomerContent;
+            trigger OnValidate()
+            begin
+                "Dispute Amount" := "Dispute Quantity" * "Dispute Unit Price";
+            end;
         }
         field(190; "Dispute Unit Price"; Decimal)
         {
             DataClassification = CustomerContent;
+            trigger OnValidate()
+            begin
+                "Dispute Amount" := "Dispute Quantity" * "Dispute Unit Price";
+            end;
         }
         field(200; "Dispute Amount"; Decimal)
         {
@@ -129,7 +137,7 @@ table 50109 "Dispute Lines"
 
     keys
     {
-        key(PK; "Dispute Line No.")
+        key(PK; "Dispute No.", "Dispute Line No.")
         {
             Clustered = true;
         }

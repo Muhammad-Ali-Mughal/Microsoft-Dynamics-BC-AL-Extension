@@ -7,18 +7,18 @@ pageextension 50106 "Posted Purch Inv Subform Ext" extends "Posted Purch. Invoic
             field(Dispute; Rec.Dispute)
             {
                 ApplicationArea = All;
-                Enabled = false;
+                Visible = Visibility;
 
             }
             field("Dispute No."; Rec."Dispute No.")
             {
                 ApplicationArea = All;
-                Enabled = true;
+                Visible = Visibility;
             }
             field("Dispute Line No."; Rec."Dispute Line No.")
             {
                 ApplicationArea = All;
-                Enabled = false;
+                Visible = Visibility;
             }
         }
     }
@@ -34,9 +34,9 @@ pageextension 50106 "Posted Purch Inv Subform Ext" extends "Posted Purch. Invoic
     local procedure CheckVisibility()
     var
     begin
-        "Setup Dispute".Get();
-        // if "Setup Dispute".FindSet() then
-        Visibility := "Setup Dispute"."Enable Vendor Disputes";
+        // "Setup Dispute".Get();
+        if "Setup Dispute".FindSet() then
+            Visibility := "Setup Dispute"."Enable Vendor Disputes";
     end;
 
     var

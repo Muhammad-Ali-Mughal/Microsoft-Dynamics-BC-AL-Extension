@@ -4,6 +4,10 @@ table 50104 "Setup Dispute"
 
     fields
     {
+        field(1; Code; Code[20])
+        {
+            DataClassification = ToBeClassified;
+        }
         field(10; "Enable Vendor Disputes"; Boolean)
         {
             DataClassification = CustomerContent;
@@ -65,7 +69,7 @@ table 50104 "Setup Dispute"
 
     keys
     {
-        key(PK; "Dispute Series No.")
+        key(PK; Code)
         {
             Clustered = true;
         }
