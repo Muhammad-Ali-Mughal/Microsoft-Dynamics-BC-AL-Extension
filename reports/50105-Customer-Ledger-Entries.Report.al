@@ -43,22 +43,25 @@ report 50105 "Cust. Ledger Entries Report"
                         Cash := "Debit Amount";
                         Credit := 0;
                     end;
-                    if (Amount > 0) or (Balance > 0) then begin
-                        Cash := "Debit Amount";
+                    if (Amount > 0) and (Balance > 0) then begin
+                        Cash := "Debit Amount" - Balance;
                     end;
-                    Cash := "Debit Amount" - Balance;
+                    // Cash := "Debit Amount" - Balance;
+                    if Amount < 0 then Cash := 0;
                     Credit := Balance;
                 end;
 
                 trigger OnPreDataItem()
                 begin
                     SetRange("Posting Date", Date_From, Date_To);
+                    Customer.CalcFields(Balance);
+                    Balance := Customer.Balance;
                 end;
             }
             trigger OnAfterGetRecord()
             begin
-                Customer.CalcFields(Balance);
-                Balance := Customer.Balance;
+                // Customer.CalcFields(Balance);
+                // Balance := Customer.Balance;
             end;
         }
     }
