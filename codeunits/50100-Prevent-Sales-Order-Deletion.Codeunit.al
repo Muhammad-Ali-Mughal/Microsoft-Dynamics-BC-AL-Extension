@@ -15,13 +15,11 @@ codeunit 50100 "Prevent Sales Order Deletion"
         SkipDelete := true;
     end;
 
-    [EventSubscriber(ObjectType::Codeunit, 80, 'OnReleaseSalesDocumentOnBeforeSetStatus', '', true, true)]
-    procedure OnReleaseSalesDocumentOnBeforeSetStatus(var SalesHeader: Record "Sales Header"; SavedStatus: Enum "Sales Document Status"; var IsHandled: Boolean)
+    [EventSubscriber(ObjectType::Codeunit, 80, 'OnRunOnBeforeFinalizePosting', '', true, true)]
+    procedure OnRunOnBeforeFinalizePosting(var SalesHeader: Record "Sales Header")
     begin
         SalesHeader.Status := Enum::"Sales Document Status"::Closed;
 
         SalesHeader.Modify();
-
-        IsHandled := true;
     end;
 }
